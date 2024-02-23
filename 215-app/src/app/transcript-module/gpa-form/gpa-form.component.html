@@ -1,0 +1,35 @@
+<form [formGroup]="gpaForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label>Course Name: <input type="text" formControlName="name" /></label>
+    </div>
+    <div>
+      <label for="code">Course Code</label>
+      <input type="string" formControlName="code" />
+    </div>
+    <div>
+      <!-- <select id="units" formControlName="unit">
+        <option *ngFor="let unit of units">{{ unit }}</option>
+      </select> -->
+      <label for="letterGrade">Letter Grade</label>
+      <!-- <input type="string" formControlName="letterGrade" /> -->
+      <select id="letterGrade" formControlName="letterGrade">
+        <option *ngFor="let grade of letterGrade">{{grade}}</option>
+      </select>
+    </div>
+    <div>
+        <label for="gradePoints">Grade Points</label>
+        <input type="number" formControlName="gradePoint" />
+      </div>
+      <div>
+        <label for="creditHours">Credit Hours</label>
+        <input type="number" formControlName="creditHours" />
+      </div>
+      <div>
+        <label for="type">Course Type</label>
+        <select id="type" formControlName="type">
+          <option *ngFor="let type of type">{{type}}</option>
+        </select>
+      </div>
+    <button type="submit">Add Course</button>
+  </form>
+  <hr />

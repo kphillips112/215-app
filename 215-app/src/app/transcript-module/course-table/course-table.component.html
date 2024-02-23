@@ -1,0 +1,38 @@
+
+<app-gpa-form
+  (courseAdded)="onCourseAdded($event)">
+</app-gpa-form>
+<h1>Kaitlyn Phillips</h1>
+<h2>Anderson University</h2>
+<table>
+  <tr><thead>Spring 2024</thead></tr>
+
+  <table>
+  
+    <tr>
+      <th>Course Code</th>
+      <th>Course Name</th>
+      <th>Letter Grade</th>
+      <th>Grade Points</th>
+      <th>Credits</th>
+      <th>Course Type</th>
+    </tr>
+    <tbody>
+        <tr *ngFor="let course of courseArray">
+          <td>{{ course.code }}</td>
+          <td>{{ course.name }}</td>
+          <td>{{ course.letterGrade }}</td>
+          <td>{{ course.gradePoint }}</td>
+          <td>{{ course.creditHours }}</td>
+          <td>{{ course.type }}</td>
+        </tr>
+      </tbody>
+
+  <tfoot>
+    <tr>
+      <td colspan="3">Total Credits and GPA</td>
+      <td>3.8</td>
+      <td>15</td>   
+   </tr>
+  </tfoot>
+</table>

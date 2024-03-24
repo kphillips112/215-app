@@ -1,16 +1,9 @@
-<h1>Hello</h1>
-<nav>
-  <ul>
-    <li>
-      <a routerLink="/profile" routerLinkActive="active">Profile</a>
-    </li>
-    <li>
-      <a routerLink="/detail" routerLinkActive="active">Detail</a>
-    </li>
-    <li>
-      <a routerLink="/transcript" routerLinkActive="active">Transcript</a>
-    </li>
-  </ul>
-</nav>
-
+<mat-toolbar color="primary">
+  <mat-icon *ngIf="showHamburger" (click)="toggleHandsetMenu()">menu</mat-icon>
+  <div class="brand">KP</div>
+  <app-site-navigation *ngIf="!showHamburger"></app-site-navigation>
+</mat-toolbar>
+<div id="handset-menu" *ngIf="showHandsetMenu" (click)="toggleHandsetMenu()">
+  <app-site-navigation></app-site-navigation>
+</div>
 <router-outlet></router-outlet>

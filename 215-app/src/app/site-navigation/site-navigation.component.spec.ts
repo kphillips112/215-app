@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ClassPageComponent } from './class-page.component';
+import { SiteNavigationComponent } from './site-navigation.component';
 
-describe('ClassPageComponent', () => {
-  let component: ClassPageComponent;
-  let fixture: ComponentFixture<ClassPageComponent>;
+describe('SiteNavigationComponent', () => {
+  let component: SiteNavigationComponent;
+  let fixture: ComponentFixture<SiteNavigationComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ClassPageComponent]
+      imports: [SiteNavigationComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(ClassPageComponent);
+    fixture = TestBed.createComponent(SiteNavigationComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
